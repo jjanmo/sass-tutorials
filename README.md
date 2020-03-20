@@ -29,3 +29,78 @@
 > 여기서는 Live Sass compiler를 사용함
 
 ## Syntax
+
+### Variable(변수) 
+- $변수명 : 변수값;
+ 
+```SCSS
+    $bg-color : #eee;
+
+    body {
+        background : $bg-color;
+    }
+```
+
+- 변수의 활용
+
+```SCSS
+$yellow: #fce473;
+$pink: #c71585;
+$green: #32cd32;
+
+$primary-color : $green;
+
+.quote{
+    border : 1px solid $primary-color;
+}
+```
+
+
+### Nesting
+- 태그의 깊이를  `{ }`로 표현하여 부모-자식관계로 표현할 수 있게 하는 문법
+- 시각적으로 CSS의 포함관계를 알 수 있음
+- 너무 복잡하고 긴 nesting은 오히려 직관성을 해칠 수 있음
+- nesting은 CSS selector간의 우선순위를 명확하게 하기위해서 사용하는 것
+```HTML
+<div>
+    box1
+    <div>box2</div>
+</div>   
+```
+```SCSS
+div {
+    //style
+    div {
+        //style
+    }
+}
+```
+
+### Nesting과 &(ampersand)
+- nesting을 할 때, selector를 중복하여 사용하지말고 대신 `&`를 사용하자
+- `&`는 상위(부모) selector를 나타냄
+
+```SCSS
+.parent{
+    &.child{
+        //style
+    }
+    &:hover{
+        //style
+    }
+}
+```
+```CSS
+.parent.child{}
+.parent:hover{}
+```
+
+- `&` 로 자식과 자손관계 표현하기
+  - 자식 : 특정요소의 직계 자손만을 선택하는 경우, 1깊이에 있는 요소들을 말함
+    - 표현 : `A > B` (부등호)
+  - 자손 : 특정요소의 자식, 손자, 후손 모두를 선택하는 경우
+    - 표현 : `A B` (공백)
+
+```SCSS
+
+```

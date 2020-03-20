@@ -12,7 +12,7 @@ div {
   padding: 20px;
 }
 
-a {
+div a {
   display: inline-block;
   text-decoration: none;
 }
@@ -40,7 +40,7 @@ a {
 #box1 #box2 {
   background-color: #eee;
   font-size: 15px;
-  border: 3px solid red;
+  border: 3px solid #8e44ad;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);

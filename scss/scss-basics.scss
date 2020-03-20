@@ -9,11 +9,10 @@ body {
 div {
     color: #333;
     padding: 20px;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
+    & a {
+        display: inline-block;
+        text-decoration: none;
+    }
 }
 
 #box1 {
@@ -21,35 +20,29 @@ a {
     border: 3px solid red;
     border-radius: 20px;
     background-color: #ffbe76;
-}
-
-#box1 > a {
-    color: #e74c3c;
-}
-
-#box1 > a:hover {
-    color: black;
-    text-decoration: line-through;
-}
-
-#box1:hover {
-    background-color: #ccc;
-}
-
-#box1 #box2 {
-    background-color: #eee;
-    font-size: 15px;
-    border: 3px solid red;
-    border-radius: 20px;
-    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
-}
-
-#box1 #box2 > a {
-    color: #e67e22;
-}
-
-#box1 #box2 > a:hover {
-    color: #c0392b;
-    font-weight: bold;
-    text-decoration: underline;
+    & > a {
+        color: #e74c3c;
+        &:hover {
+            color: black;
+            text-decoration: line-through;
+        }
+    }
+    &:hover {
+        background-color: #ccc;
+    }
+    & #box2 {
+        background-color: #eee;
+        font-size: 15px;
+        border: 3px solid #8e44ad;
+        border-radius: 20px;
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+        & > a {
+            color: #e67e22;
+            &:hover {
+                color: #c0392b;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
 }
